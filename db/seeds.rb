@@ -5,13 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Destroying old restaurants"
+Restaurant.destroy_all
+
 puts 'Creating your favourite restaurants'
 
-Restaurant.create(name: 'Plaquemine', category: 'french')
-Restaurant.create(name: 'Sushi', category: 'japanese')
-Restaurant.create(name: 'Cheffe', category: 'belgian')
-Restaurant.create(name: 'Coco Momo', category: 'italian')
-Restaurant.create(name: 'Franco Manca', category: 'italian')
+Restaurant.create(name: 'Plaquemine', address: 'Angel, London', category: 'french')
+Restaurant.create(name: 'Sushi', address: 'Tokyo, Japan', category: 'japanese')
+Restaurant.create(name: 'Cheffe', address: 'Hoxton', category: 'belgian')
+Restaurant.create(name: 'Coco Momo', address: 'Palace Street, Victoria', category: 'italian')
+Restaurant.create(name: 'Franco Manca', address: '42 Kensington Road', category: 'italian')
 
 puts 'Created!'
-puts Restaurant.all
